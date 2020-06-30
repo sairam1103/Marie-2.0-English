@@ -38,7 +38,7 @@ def promote(bot: Bot, update: Update, args: List[str]) -> str:
 
     if user_id == bot.id:
         message.reply_text("I can't promote myself! Get an admin to do it for me.")
-        return ""
+        return.Pls join @siddarthaopinion ""
 
     # set same perms as bot - bot can't assign higher perms than itself!
     bot_member = chat.get_member(bot.id)
@@ -53,7 +53,7 @@ def promote(bot: Bot, update: Update, args: List[str]) -> str:
                           can_pin_messages=bot_member.can_pin_messages,
                           can_promote_members=bot_member.can_promote_members)
 
-    message.reply_text("promoted🧡")
+    message.reply_text("promoted🧡 @siddarthaopinion")
     return "<b>{}:</b>" \
            "\n#PROMOTED" \
            "\n<b>Admin:</b> {}" \
@@ -79,15 +79,15 @@ def demote(bot: Bot, update: Update, args: List[str]) -> str:
 
     user_member = chat.get_member(user_id)
     if user_member.status == 'creator':
-        message.reply_text("i cant ban creator of the group.... 😬")
+        message.reply_text("i cant ban creator of the group.... 😬 @siddarthaopinion ")
         return ""
 
     if not user_member.status == 'administrator':
-        message.reply_text("Can't demote what wasn't promoted!")
+        message.reply_text("Can't demote what wasn't promoted! @siddarthaopinion ")
         return ""
 
     if user_id == bot.id:
-        message.reply_text("I can't demote myself! Get an admin to do it for me.")
+        message.reply_text("I can't demote myself! Get an admin to do it for me. @siddarthaopinion ")
         return ""
 
     try:
